@@ -37,7 +37,7 @@ jobs:
     steps:
       # Uses the default GITHUB_TOKEN so the retag below does not
       # re-fire this workflow (see OSS_SPEC §10.3).
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
           ref: main
@@ -106,7 +106,7 @@ jobs:
             os: windows-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ needs.update-repo.outputs.commit_sha }}
 
@@ -210,7 +210,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ needs.update-repo.outputs.commit_sha }}
 
@@ -233,7 +233,7 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ needs.update-repo.outputs.commit_sha }}
 
